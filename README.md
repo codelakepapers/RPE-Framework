@@ -1,2 +1,1 @@
-# RPE-Framework
-# This is the code repository for the paper, "Learning Efficient Positional Encodings with GNNs"
+# Code repository for the paper, "Learning Efficient Positional Encodings with GNNs"
