@@ -17,6 +17,7 @@ def main() -> None:
     parser.add_argument("--gpu_id", type=int, required=False, default=1)
     parser.add_argument("--subset_size", type=int, default=-1)
     parser.add_argument("--seed", type=int, default=1)
+    parser.add_argument("--dataset", type=str, required=True)
     args = parser.parse_args()
 
     cs = ConfigStore.instance()
@@ -31,10 +32,10 @@ def main() -> None:
     if cfg.wandb:
         wandb.login(key="") # use your own WanbB key
         #cfg.__dict__['num_params'] = sum(param.numel() for param in self.model.parameters())
-        wandb.init(project="SPE-Reddit-Binary", name=cfg.wandb_run_name, config=cfg.__dict__)
+        wandb.init(project="Pearl-Reddit-Binary", name=cfg.wandb_run_name, config=cfg.__dict__)
 
     for i in [5, 6, 7, 8, 9]:
-        trainer = Trainer(cfg, args.gpu_id)
+        trainer = Trainer(cfg, args.gpu_id, args.dataset)
         print(i)
         loss = trainer.train(i)
         print(i, loss)
