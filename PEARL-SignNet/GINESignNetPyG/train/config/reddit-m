@@ -11,7 +11,7 @@ model:
 train:
   epochs: 310
   runs: 10
-  batch_size: 70
+  batch_size: 100
 wandb: True
 run_name: MULTI70-4:128
 project_name: Reddit-M
