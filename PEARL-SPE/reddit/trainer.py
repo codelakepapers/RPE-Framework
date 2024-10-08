@@ -67,7 +67,7 @@ class Trainer:
     curr_epoch: int
     curr_batch: int
 
-    def __init__(self, cfg: Schema, gpu_id: Optional[int]) -> None:
+    def __init__(self, cfg: Schema, gpu_id: Optional[int], dataset='REDDIT-BINARY') -> None:
         set_seed(cfg.seed)
 
         # Initialize configuration
@@ -91,7 +91,7 @@ class Trainer:
 
         # Construct data loaders
         ## dataset preprocessing (before saved in disk) and loading
-        self.dataset = 'REDDIT-BINARY'
+        self.dataset = dataset
         transform = self.get_projs if cfg.pe_method == 'basis_inv' else self.get_snorm
         pre_transform = None#self.pre_transform if cfg.pe_method != 'none' else None
         root = 'data/' + self.dataset
