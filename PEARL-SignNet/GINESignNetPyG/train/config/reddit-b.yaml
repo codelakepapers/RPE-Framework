@@ -1,9 +1,5 @@
 dataset: REDDIT-BINARY
 model:
-  # gnn_type: PPGN
-  # num_layers: 1
-  # nlayer_inner: 4
-  # pool: add
   class_num: 1 # 1 or 5
   n_out: 1
   gnn_type: SignNet
@@ -18,5 +14,5 @@ train:
   runs: 10
   batch_size: 70
 wandb: True
-run_name: MULTI70-4:128-mean1-s30_REDO()
-project_name: Reddit-BINARY-sample-ablation
+run_name: BIN70
+project_name: Reddit-BINARY
