@@ -4,4 +4,4 @@
 * Implementations of PEARL on the REDDIT datasets can be found in Pearl-SignNet
 
 ### Attribution
-We use the [[SignNet repo](https://github.com/cptq/SignNet-BasisNet)] by Lim et al. in 2022, and the [[SPE repo](https://github.com/Graph-COM/SPE)] by Huang et al. 2024.
+We use the [[SignNet repo](https://github.com/cptq/SignNet-BasisNet)] by Lim et al. in 2022, and the [[SPE repo](https://github.com/Graph-COM/SPE)] by Huang et al. 2024. Instructions on setting up the virtual environment can be found here.
